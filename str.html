@@ -1,2 +1,211 @@
-<h1> Hello World <h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Yadav | DevOps & Cloud Engineer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f4f6f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0a2540;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: #102a43;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #0a2540;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #0a2540;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skill {
+            background: #e6f0ff;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #0a2540;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Sahil Yadav</h1>
+    <p>DevOps | AWS Cloud | Jenkins | Docker | Linux</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#pipeline">CI/CD</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="card">
+            <p>
+                I am a passionate DevOps and Cloud Engineer with hands-on experience
+                in AWS, Linux, Jenkins, Docker, and CI/CD automation.
+                I enjoy building reliable infrastructure and automating deployments.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills">
+            <div class="skill">Linux</div>
+            <div class="skill">AWS (EC2, IAM, VPC)</div>
+            <div class="skill">Jenkins</div>
+            <div class="skill">Docker</div>
+            <div class="skill">Nginx</div>
+            <div class="skill">Git & GitHub</div>
+            <div class="skill">CI/CD Pipelines</div>
+            <div class="skill">Terraform (Basics)</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="card">
+            <h3>HTML Deployment using Jenkins & Nginx</h3>
+            <p>
+                Built a CI/CD pipeline using Jenkins that pulls HTML code from GitHub
+                and deploys it automatically to an Nginx server running on port 80.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>AWS Infrastructure Automation</h3>
+            <p>
+                Created AWS infrastructure using Terraform including VPC, EC2,
+                Security Groups, and IAM roles following least privilege principles.
+            </p>
+        </div>
+    </section>
+
+    <section id="pipeline">
+        <h2>CI/CD Pipeline Flow</h2>
+        <div class="card">
+            <ol>
+                <li>Developer pushes code to GitHub</li>
+                <li>Jenkins pulls repository using Jenkinsfile</li>
+                <li>Pipeline validates HTML files</li>
+                <li>Files are deployed to Nginx web server</li>
+                <li>Application is live on port 80</li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="card">
+            <p><strong>Email:</strong> sahil@example.com</p>
+            <p><strong>GitHub:</strong> github.com/xenon06-hub</p>
+            <p><strong>LinkedIn:</strong> linkedin.com/in/sahil-yadav</p>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>© 2025 Sahil Yadav | Deployed using Jenkins & Nginx</p>
+</footer>
+
+</body>
+</html>
+
     
