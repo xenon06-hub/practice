@@ -3,32 +3,19 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-            steps {
-                echo 'Cloning GitHub repository...'
-                git 'https://github.com/xenon06-hub/practice.git'
-            }
-        }
-
         stage('Verify Files') {
             steps {
-                echo 'Listing files in workspace...'
+                echo 'Listing project files...'
                 sh 'ls -la'
             }
         }
 
-        stage('Build') {
+        stage('Deploy to Nginx') {
             steps {
-                echo 'No build needed for static HTML'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying HTML files...'
+                echo 'Deploying HTML to Nginx (port 80)...'
                 sh '''
-                mkdir -p deploy
-                cp *.html deploy/
+                sudo rm -rf /var/www/html/*
+                sudo cp *.html /var/www/html/
                 '''
             }
         }
@@ -36,7 +23,7 @@ pipeline {
 
     post {
         success {
-            echo 'Pipeline executed successfully!'
+            echo 'Deployment successful! Website live on port 80.'
         }
         failure {
             echo 'Pipeline failed!'
