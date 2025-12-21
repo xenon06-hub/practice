@@ -11,13 +11,13 @@ pipeline {
         }
 
         stage('Deploy to Nginx') {
-            steps {
-                echo 'Deploying HTML to Nginx (port 80)...'
-                sh '''
-                sudo rm -rf /var/www/html/*
-                sudo cp *.html /var/www/html/
-                sudo systemctl restart nginx
-                '''
+           sh '''
+           sudo rm -rf /var/www/html/*
+           sudo cp *.html *.css /var/www/html/
+           sudo chown -R www-data:www-data /var/www/html
+           sudo chmod -R 755 /var/www/html
+           sudo systemctl reload nginx
+            '''
             }
         }
     }
