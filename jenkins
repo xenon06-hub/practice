@@ -1,0 +1,45 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Clone Repository') {
+            steps {
+                echo 'Cloning GitHub repository...'
+                git 'https://github.com/xenon06-hub/practice.git'
+            }
+        }
+
+        stage('Verify Files') {
+            steps {
+                echo 'Listing files in workspace...'
+                sh 'ls -la'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'No build needed for static HTML'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying HTML files...'
+                sh '''
+                mkdir -p deploy
+                cp *.html deploy/
+                '''
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline executed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed!'
+        }
+    }
+}
