@@ -16,6 +16,7 @@ pipeline {
                 sh '''
                 sudo rm -rf /var/www/html/*
                 sudo cp *.html /var/www/html/
+                sudo systemctl restart nginx
                 '''
             }
         }
