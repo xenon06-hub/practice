@@ -11,13 +11,14 @@ pipeline {
         }
 
         stage('Deploy to Nginx') {
-           sh '''
-           sudo rm -rf /var/www/html/*
-           sudo cp *.html *.css /var/www/html/
-           sudo chown -R www-data:www-data /var/www/html
-           sudo chmod -R 755 /var/www/html
-           sudo systemctl reload nginx
-            '''
+            steps {
+                sh '''
+                    sudo rm -rf /var/www/html/*
+                    sudo cp *.html *.css /var/www/html/
+                    sudo chown -R www-data:www-data /var/www/html
+                    sudo chmod -R 755 /var/www/html
+                    sudo systemctl reload nginx
+                '''
             }
         }
     }
